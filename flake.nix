@@ -11,7 +11,8 @@
         packages = with pkgs; [
           (python3.withPackages (
             ps: with ps; [
-              notebook
+              jupytext
+              jupyter-collaboration
 
               numpy
               matplotlib

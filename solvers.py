@@ -1,7 +1,3 @@
-import matplotlib.pyplot as plt
-import numpy as np
-
-
 def euler_step(t_n, y_n, f, h):
     return y_n + h * f(t_n, y_n)
 
