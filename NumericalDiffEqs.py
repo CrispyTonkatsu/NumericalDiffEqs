@@ -57,6 +57,8 @@ def rk4_step(t_n, y_n, f, h):
 
 
 def solve(f, solver, t_range, y_0):
+    y_0 = np.atleast_1d(y_0)
+
     N = len(t_range)
     dim = len(y_0)
 
@@ -112,7 +114,7 @@ ax_list = ax_layout.flatten()
 for i, axes in enumerate(ax_list):
     y_numerical, label = solver_sols[i]
     axes.plot(t, y, label="Analytical Solution", color="blue", alpha=1.0)
-    axes.plot(t, y_numerical, label=label, color="red", alpha=0.8)
+    axes.plot(t, y_numerical[:, 0], label=label, color="red", alpha=0.8)
 
     axes.set_title(label)
     axes.set_xlabel("t")
