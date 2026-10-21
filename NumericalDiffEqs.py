@@ -240,7 +240,7 @@ def f3_sol(t):
     return (100 * np.sin((np.sqrt(399) * t) / (10))) / (np.sqrt(399) * np.exp(t / (10)))
 
 
-t = np.linspace(0, 50, 500)
+t = np.linspace(0, 50, 1000)
 y = f3_sol(t)
 y_0 = np.array([0, 10])
 
